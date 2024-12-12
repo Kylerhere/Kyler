@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A heartfelt Christmas wish for my best online sister.">
+  <meta name="keywords" content="Christmas, Sister, Shayari, Wishes, Love">
+  <title>Happy Christmas, Sister!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      background: #1e1e2f;
+      text-align: center;
+      overflow: hidden;
+    }
+    .layer {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      transition: top 1s;
+    }
+    .hidden {
+      top: 100vh;
+    }
+    h1, h2 {
+      margin: 20px;
+    }
+    .shayari {
+      font-size: 1.5em;
+      margin: 20px;
+      color: #ffdd57;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #ff5733;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #c70039;
+    }
+  </style>
+</head>
+<body>
+  <div id="layer1" class="layer">
+    <h1>Merry Christmas, Sister!</h1>
+    <button onclick="nextLayer(1)">Start</button>
+  </div>
+
+  <div id="layer2" class="layer hidden">
+    <div class="shayari">"Duniya me sabse pyara rishta hota hai, Ek behen ka pyaar, Jo sada saath deta hai."</div>
+    <button onclick="nextLayer(2)">Next</button>
+  </div>
+
+  <div id="layer3" class="layer hidden">
+    <div class="shayari">"Meri zindagi me dosti ka asal matlab samjhane wali tum, Har dukh me saath nibhaane wali tum."</div>
+    <button onclick="nextLayer(3)">Next</button>
+  </div>
+
+  <div id="layer4" class="layer hidden">
+    <h2>Wishing you a Christmas filled with joy and love!</h2>
+    <button onclick="nextLayer(4)">Next</button>
+  </div>
+
+  <div id="layer5" class="layer hidden">
+    <h2>It feels so good to talk to you, Sister. You're my inspiration.</h2>
+    <button onclick="nextLayer(5)">Next</button>
+  </div>
+
+  <div id="layer6" class="layer hidden">
+    <h2>I promise to always protect you, no matter what.</h2>
+    <button onclick="nextLayer(6)">Next</button>
+  </div>
+
+  <div id="layer7" class="layer hidden">
+    <h1>You are the BEST Sister!</h1>
+    <h2>Thank you for being in my life.</h2>
+    <h3>With love, always. — Kush</h3>
+  </div>
+
+  <script>
+    function nextLayer(current) {
+      document.getElementById(`layer${current}`).classList.add("hidden");
+      document.getElementById(`layer${current + 1}`).classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
